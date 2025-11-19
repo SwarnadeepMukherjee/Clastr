@@ -1,0 +1,12 @@
+header{
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    border-right: 2px solid rgb(162, 162, 162);
+}
+header nav img{
+    width: 150px;
+}
+header nav ul li{
+    padding: 15px 50px;
+}
