@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 header {
     width: 60px;
     position: absolute;
@@ -26,15 +28,20 @@ header nav ul li a{
     font-size: 20px;
     transition: .3s ease;
     text-decoration: none;
-    color: rgb(48, 48, 48);
+    color: rgb(93, 93, 93);
     padding-left: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 header:hover{
-    width: 180px;
+    width: 190px;
     transition: .5s ease;
 }
 header:hover nav ul li a{
     opacity: 1;
     transition: 1.5s ease;
+}
+header nav ul li a:hover{
+    color: black;
+    transition: .2s ease;
 }
