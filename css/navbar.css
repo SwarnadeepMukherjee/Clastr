@@ -2,46 +2,109 @@
 
 header {
     width: 60px;
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    border-right: 2px solid rgb(162, 162, 162);
-    transition: .5s ease;
+    border-right: 1.5px solid rgb(162, 162, 162);
+    background-color: #fff;
+    transition: width 0.5s ease;
+}
+
+header:hover {
+    width: 190px;
 }
 
 header nav img {
     padding: 30px 18px;
     padding-bottom: 50px;
     width: 150px;
+    transition: all 0.3s ease;
 }
-header nav ul li{
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    width: 100%;
+}
+
+header nav ul li a {
     display: flex;
     align-items: center;
     padding: 10px;
-    list-style-type: none;
-}
-header nav ul li p{
-    font-size: 30px;
-}
-header nav ul li a{
-    display: flex;
-    opacity: 0;
-    font-size: 20px;
-    transition: .3s ease;
     text-decoration: none;
     color: rgb(93, 93, 93);
+    font-size: 30px;
+    transition: 0.3s ease;
+}   
+
+header nav ul li a div {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    font-size: 20px;
     padding-left: 10px;
     font-family: "Inter", sans-serif;
+    transition: opacity 0.3s ease;
 }
 
-header:hover{
-    width: 190px;
-    transition: .5s ease;
-}
-header:hover nav ul li a{
+header:hover nav ul li a div {
     opacity: 1;
-    transition: 1.5s ease;
 }
-header nav ul li a:hover{
+
+header nav ul li a div:hover {
     color: black;
-    transition: .2s ease;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        background-color: transparent;
+        display: block;
+    }
+
+    header nav img {
+        display: block;
+        width: 120px;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-top: 1.5px solid rgb(162, 162, 162);
+        background-color: #fff;
+        z-index: 999;
+    }
+
+    header nav ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+        padding: 10px 0;
+        color: rgb(93, 93, 93);
+    }
+
+    header nav ul li a p {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    header nav ul li a div {
+        display: none;
+    }
 }
